@@ -7,7 +7,7 @@ _Currently uses Adobe DNG Converter's MacOS command line support._
 - [x] Open dng converter and convert files
 - [x] Get paths of raw photos
 - [ ] Automatically check for new raw photos in _dropbox_
-- [ ] Move converted photos into _converted_
-- [ ] Prevent duplication of converted photos
+- [x] Move converted photos into _converted_
+- [x] Prevent duplication of converted photos
 - [ ] Run script automatically when system is on
 - [ ] Sync script to cloud
