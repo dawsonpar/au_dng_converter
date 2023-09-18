@@ -1,1 +1,5 @@
 .DS_Store
+*.dng
+*.cr3
+*.arw
+*.nef

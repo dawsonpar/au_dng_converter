@@ -25,17 +25,19 @@ class FileEventHandler(FileSystemEventHandler):
         file_path = event.src_path
 
         if any(file_path.endswith(ext) for ext in extensions_to_search):
+            time.sleep(2)
             print(f"New file detected: {file_path}")
 
             photo_paths = get_from_dropbox()
 
             for path in photo_paths:
-                time.sleep(1)
+                time.sleep(2)
                 convert_to_dng(path)
 
+            """
             if len(photo_paths) != 0:
                 print("Preparing to move dng files.")
-                time.sleep(3)
+                time.sleep(5)
 
                 # move dngs to converted folder
                 move_photos()
@@ -45,6 +47,7 @@ class FileEventHandler(FileSystemEventHandler):
             else:
                 # move any remaingin raws to raws folder
                 move_photos(dng=False)
+            """
 
 
 def get_from_dropbox():
@@ -86,7 +89,7 @@ def get_from_dropbox():
                     print(
                         f"Skipping {raw_photo_path} as it has already been converted."
                     )
-                    move_photos(dng=False)
+                    # move_photos(dng=False)
 
         else:
             print(
