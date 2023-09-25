@@ -68,7 +68,10 @@ def get_from_dropbox():
         matching_files = [
             filename
             for filename in os.listdir(subdirectory_path)
-            if any(filename.endswith(ext) for ext in extensions_to_search)
+            if (
+                not filename.startswith("._")
+                and any(filename.endswith(ext) for ext in extensions_to_search)
+            )
         ]
 
         if matching_files:
