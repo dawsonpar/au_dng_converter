@@ -3,3 +3,5 @@
 *.cr3
 *.arw
 *.nef
+
+__pycache__/
