@@ -11,7 +11,7 @@ import time
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
-extensions_to_search = [".cr3", ".cr2", ".arw", ".nef"]
+extensions_to_search = [".cr3", ".cr2", ".arw", ".nef", ".ARW"]
 raws_folder_path = "/Users/dawsonpar/Desktop/coding/AU/dng-script/raws"
 new_dng_event = threading.Event()
 
